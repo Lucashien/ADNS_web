@@ -21,16 +21,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Build
-      run: npm run build # 假設您的 package.json 中有 "build" 腳本用於建構應用
-
+        cache: 'yarn'
+    - run : yarn
+    - run : yarn build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build # 這裡假設建構後的文件在 "build" 目錄，請根據您的實際情況進行調整
+        publish_dir: ./dist
