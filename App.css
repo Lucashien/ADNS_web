@@ -1,0 +1,136 @@
+/* app globle */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* img */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* intro */
+.App-intro {
+  margin-bottom: 30px;
+}
+
+/* visitor counter */
+.-counter {
+  margin: 20px;
+  font-size: 2em;
+}
+
+/* massenger */
+.App-message-board {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.App-message-board h2 {
+  background: #005fff;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+.App-message-board input {
+  width: calc(100% - 85px);
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.App-message-board button {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ddd;
+  background: #005fff;
+  color: white;
+  cursor: pointer;
+}
+
+.App-message-board button:hover {
+  background-color: #52a8d8;
+}
+
+.App-messages {
+  height: 300px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.App-message:last-child {
+  border-bottom: none;
+}
+
+.App-message-text {
+  background: #e0e0e0;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  max-width: 70%;
+}
+
+/* 聊天氣泡的對話效果 */
+.App-message-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: #e0e0e0;
+  border-left: 0;
+  margin-top: 10px;
+  margin-left: -5px;
+}
+
+/* messenger */
+.App-message-board ul {
+  list-style: none;
+  padding: 0;
+}
+
+.App-message-board li {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  transition: background-color 0.2s;
+}
+
+.App-message-board li:hover {
+  background-color: #eaeaea;
+}
